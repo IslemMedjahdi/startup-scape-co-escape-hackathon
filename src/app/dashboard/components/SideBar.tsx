@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 
-import { Home } from 'lucide-react';
+import { Home, LogOutIcon } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 import { TooltipProvider } from '@/components/ui/tooltip';
@@ -15,7 +15,7 @@ import LOGO_WITH_FONT from '@/../public/images/logo-with-font.png';
 
 import { Separator } from '@/components/ui/separator';
 import Link from 'next/link';
-import { Button } from '@/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/button';
 
 import { signOut } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
@@ -108,10 +108,19 @@ const SideBar = ({
                         ]}
                     />
                     <Separator />
-                    <div className="p-2">
-                        <Button size="sm" className="w-full" onClick={handleLogout}>
-                            Logout
-                        </Button>
+                    <div className="flex items-center justify-center mt-4 p-2">
+                        <div
+                            className={cn(
+                                buttonVariants({ size: 'icon' }),
+                                'cursor-pointer h-9',
+                                isCollapsed ? 'w-9' : ' w-full',
+                                'dark:bg-muted dark:text-muted-foreground dark:hover:bg-muted dark:hover:text-white space-x-2',
+                            )}
+                            onClick={handleLogout}
+                        >
+                            <LogOutIcon size={16} />
+                            {!isCollapsed && 'Logout'}
+                        </div>
                     </div>
                 </ResizablePanel>
                 <ResizableHandle withHandle />
