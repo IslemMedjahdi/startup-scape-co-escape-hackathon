@@ -1,12 +1,13 @@
-import { Metadata } from "next";
-import React from "react";
+import { Metadata } from 'next';
+import React from 'react';
+import DashboardContainer from './DashboardContainer';
 
 export const metadata: Metadata = {
-  title: "CSE Dashboard | Home",
+    title: 'CSE Dashboard | Home',
 };
 
 const DashboardHomePage = async () => {
-  return <div>Dashboard Home Page</div>;
+    return <DashboardContainer />;
 };
 
 export default DashboardHomePage;

@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 
-import { Home, LogOutIcon } from 'lucide-react';
+import { Building, Home, LogOutIcon } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 import { TooltipProvider } from '@/components/ui/tooltip';
@@ -104,6 +104,13 @@ const SideBar = ({
                                 title: 'Home',
                                 icon: Home,
                                 variant: 'default',
+                                href: '/dashboard',
+                            },
+                            {
+                                title: 'Concurrent Companies',
+                                icon: Building,
+                                variant: 'default',
+                                href: '/dashboard/concurrent-companies',
                             },
                         ]}
                     />
