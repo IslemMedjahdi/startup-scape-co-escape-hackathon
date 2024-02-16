@@ -1,8 +1,8 @@
+import { controllerWrapper } from '../../controller-wrapper';
 import { handler } from './handler';
-import { RegisterRequest } from './request';
 
 const POST = async (req: Request) => {
-    return Response.json(await handler(req.body as RegisterRequest));
+    return await controllerWrapper(async () => await handler(await req.json()));
 };
 
 export { POST };
