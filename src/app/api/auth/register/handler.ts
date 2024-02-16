@@ -22,8 +22,8 @@ const handler = async (request: RegisterRequest): Promise<RegisterResponse> => {
         email: rest.email,
         password: hashedPassword,
         role: 'founder',
-        firstName: 'Founder',
-        lastName: 'Founder',
+        firstName: rest.founderFirstName,
+        lastName: rest.founderLastName,
     });
 
     const id = crypto.randomUUID();
