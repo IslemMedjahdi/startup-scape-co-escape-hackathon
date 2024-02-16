@@ -47,7 +47,7 @@ const RegisterSideBar = ({ currentStepIndex, goTo }: RegisterSideBarProps) => {
                                 show={currentStepIndex === 1}
                                 color="#bd284d"
                             >
-                                Select plan
+                                Company Info
                             </RoughNotation>
                         </button>
                     </li>
@@ -67,7 +67,7 @@ const RegisterSideBar = ({ currentStepIndex, goTo }: RegisterSideBarProps) => {
                                 show={currentStepIndex === 2}
                                 color="#E7B8FF"
                             >
-                                Add-ons
+                                Social Media
                             </RoughNotation>
                         </button>
                     </li>

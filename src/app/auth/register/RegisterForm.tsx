@@ -8,6 +8,8 @@ import { AnimatePresence } from 'framer-motion';
 import RegisterSideBar from './components/RegisterSideBar';
 import SuccessMessage from './components/SuccessMessage';
 import FounderInfoForm from './components/FounderInfoForm';
+import CompanyInfoForm from './components/CompanyInfoForm';
+import SocialMediaForm from './components/SocialMediaForm';
 
 const RegisterForm = () => {
     const [formData, setFormData] = useState<RegisterRequest>({
@@ -99,8 +101,20 @@ const RegisterForm = () => {
                                     updateForm={updateForm}
                                 />
                             )}
-                            {currentStepIndex === 1 && <div>zawaj</div>}
-                            {currentStepIndex === 2 && <div>raba3</div>}
+                            {currentStepIndex === 1 && (
+                                <CompanyInfoForm
+                                    errors={errors}
+                                    form={formData}
+                                    updateForm={updateForm}
+                                />
+                            )}
+                            {currentStepIndex === 2 && (
+                                <SocialMediaForm
+                                    errors={errors}
+                                    form={formData}
+                                    updateForm={updateForm}
+                                />
+                            )}
                             {currentStepIndex === 3 && <div>5amas</div>}
                         </AnimatePresence>
                         <div className="w-full items-center flex justify-between">

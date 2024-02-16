@@ -1,3 +1,3 @@
 export interface RegisterResponse {
-    success: true;
+    id: string;
 }

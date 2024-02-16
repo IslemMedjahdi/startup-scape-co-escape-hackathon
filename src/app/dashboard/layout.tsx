@@ -12,7 +12,7 @@ const AdminLayout = async ({ children }: { children: React.ReactNode }) => {
     const session = await getServerSession();
 
     if (!session) {
-        redirect(`/dashboard/auth/login?callbackUrl=/dashboard`);
+        redirect(`/auth/login?callbackUrl=/`);
     }
 
     const layout = cookies().get('react-resizable-panels:layout');
