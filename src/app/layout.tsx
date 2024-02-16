@@ -24,7 +24,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" className={`${ubuntu.variable} bg-[#0d0f12] text-neutral-200`}>
-            <body className="flex justify-center items-center h-screen w-full">
+            <body>
                 <ThemeProvider
                     attribute="class"
                     defaultTheme="system"
