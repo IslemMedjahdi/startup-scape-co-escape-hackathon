@@ -29,7 +29,7 @@ const schema = new mongoose.Schema({
     role: {
         validate: {
             validator: (value: string) => {
-                return ['admin', 'user'].includes(value);
+                return ['admin', 'founder'].includes(value);
             },
             message: 'Invalid role',
         },

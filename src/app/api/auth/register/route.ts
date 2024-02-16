@@ -1,13 +1,8 @@
-import { NextRequest } from 'next/server';
+import { handler } from './handler';
+import { RegisterRequest } from './request';
 
-interface RegisterRequest {}
-
-interface RegisterResponse {
-    success: true;
-}
-
-const POST = (req: Request) => {
-    return Response.json({ test: true });
+const POST = async (req: Request) => {
+    return Response.json(await handler(req.body as RegisterRequest));
 };
 
 export { POST };
