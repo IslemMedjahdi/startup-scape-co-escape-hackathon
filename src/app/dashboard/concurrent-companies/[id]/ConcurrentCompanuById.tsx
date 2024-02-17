@@ -23,6 +23,7 @@ import {
     Radar,
     PieChart,
     Pie,
+    Cell,
 } from 'recharts';
 import { Tooltip } from '@radix-ui/react-tooltip';
 import { FacebookIcon, InstagramIcon, LinkedinIcon, TwitterIcon } from 'lucide-react';
@@ -138,11 +139,11 @@ const ConcurrentCompanuById = () => {
                         <div className="flex flex-col dark:bg-slate-800 rounded p-4 bg-gray-50">
                             <p className="font-medium text-sm"> Target Market:</p>
                             <p>
-                                Jumia's target market is the African population. They aim to make
-                                online shopping accessible to everyone in Africa by offering a
+                                Jumia&apos;s target market is the African population. They aim to
+                                make online shopping accessible to everyone in Africa by offering a
                                 variety of products at affordable prices and providing reliable
                                 delivery services. They also target sellers who want to reach a
-                                wider audience and expand their business. Jumia's platform is
+                                wider audience and expand their business. Jumia&apos;s platform is
                                 designed to cater to the needs of both buyers and sellers in Africa.
                             </p>
                         </div>
@@ -236,9 +237,51 @@ const ConcurrentCompanuById = () => {
                     </div>
                     <div className="p-2">
                         <p className="text-base font-medium">Funding Rounds & Investors</p>
+                        <div className="h-96">
+                            <ResponsiveContainer width="90%" height={350}>
+                                <LineChart
+                                    width={500}
+                                    height={300}
+                                    data={[
+                                        { name: 'Phase 1', value: 1200 },
+                                        { name: 'Phase 2', value: 4200 },
+                                        { name: 'Phase 3', value: 2200 },
+                                    ]}
+                                >
+                                    <XAxis dataKey="name" />
+                                    <YAxis tickFormatter={value => `${value}K DZD`} />
+                                    <CartesianGrid stroke="#eee" strokeDasharray="5 5" />
+                                    <Line type="monotone" dataKey="value" stroke="#8884d8" />
+                                </LineChart>
+                            </ResponsiveContainer>
+                        </div>
                     </div>
                     <div className="p-2">
                         <p className="text-base font-medium">sales per wilayas</p>
+
+                        <ResponsiveContainer width="90%" height={250}>
+                            <PieChart>
+                                <Pie
+                                    dataKey="value"
+                                    isAnimationActive={true}
+                                    data={[
+                                        { name: 'Alger', value: 11200 },
+                                        { name: 'Oran', value: 42000 },
+                                        { name: 'Annaba', value: 20200 },
+                                        { name: 'rest', value: 1000 },
+                                    ]}
+                                    label={({ percent, name }) => {
+                                        return `${name} (${(percent * 100).toFixed(0)}%)`;
+                                    }}
+                                    cx="50%"
+                                    cy="50%"
+                                    outerRadius={80}
+                                    fill="#8884d8"
+                                />
+
+                                <Tooltip />
+                            </PieChart>
+                        </ResponsiveContainer>
                     </div>
                 </div>
             </div>
@@ -247,7 +290,7 @@ const ConcurrentCompanuById = () => {
                 <p className="text-lg font-medium">Team & Culture</p>
                 <div className="p-2">
                     <p className="text-base font-medium">Founders & Key Executives</p>
-                    <div className="flex items-center gap-2 justify-center">
+                    <div className="flex py-6 items-center gap-6 justify-center">
                         {[
                             {
                                 fullName: 'John Doe',
