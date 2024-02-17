@@ -3,7 +3,7 @@ import React from 'react';
 import DashboardContainer from './DashboardContainer';
 
 export const metadata: Metadata = {
-    title: 'CSE Dashboard | Home',
+    title: 'STARTUP SCAPE | Home',
 };
 
 const DashboardHomePage = async () => {
