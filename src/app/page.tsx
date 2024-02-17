@@ -1,3 +1,7 @@
+import { redirect } from 'next/navigation';
+
 export default function Home() {
-  return <div>Hello world</div>;
+    redirect('https://startscape.vercel.app/');
+
+    return <div>Hello world</div>;
 }
