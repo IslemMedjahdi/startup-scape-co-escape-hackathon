@@ -23,7 +23,7 @@ const SocialMediaForm = ({ form, errors, updateForm }: SocialMediaFormProps) => 
                         name="facebook"
                         id="facebook"
                         placeholder="e.g. facebook.com"
-                        value={form.companyName}
+                        value={form.socialMedia.facebook}
                         onChange={e =>
                             updateForm({
                                 socialMedia: { ...form.socialMedia, facebook: e.target.value },
@@ -42,7 +42,7 @@ const SocialMediaForm = ({ form, errors, updateForm }: SocialMediaFormProps) => 
                         name="linkedin"
                         id="linkedin"
                         placeholder="e.g. linkedin.com"
-                        value={form.companyName}
+                        value={form.socialMedia.linkedin}
                         onChange={e =>
                             updateForm({
                                 socialMedia: { ...form.socialMedia, linkedin: e.target.value },

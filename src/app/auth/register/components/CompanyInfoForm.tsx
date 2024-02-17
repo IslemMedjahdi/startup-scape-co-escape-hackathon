@@ -94,6 +94,38 @@ const CompanyInfoForm = ({ form, errors, updateForm }: CompanyInfoFormProps) => 
                         <p className="text-red-500 text-sm">{errors.companyWebsite}</p>
                     )}
                 </div>
+                <div className="flex flex-col gap-2">
+                    <Label htmlFor="target market">Target Market</Label>
+                    <Input
+                        type="url"
+                        name="target market"
+                        id="target market"
+                        placeholder="e.g. e-commerce, retail, etc."
+                        value={form.targetMarket}
+                        className="w-full"
+                        onChange={e => updateForm({ targetMarket: e.target.value })}
+                        required={false}
+                    />
+                    {errors.targetMarket && (
+                        <p className="text-red-500 text-sm">{errors.targetMarket}</p>
+                    )}
+                </div>
+                <div className="flex flex-col gap-2">
+                    <Label htmlFor="year founded">Year Founded</Label>
+                    <Input
+                        type="number"
+                        name="year founded"
+                        id="year founded"
+                        placeholder="e.g. 2021."
+                        value={form.yearFounded}
+                        className="w-full"
+                        onChange={e => updateForm({ yearFounded: Number(e.target.value) })}
+                        required={false}
+                    />
+                    {errors.yearFounded && (
+                        <p className="text-red-500 text-sm">{errors.yearFounded}</p>
+                    )}
+                </div>
             </div>
         </FormWrapper>
     );

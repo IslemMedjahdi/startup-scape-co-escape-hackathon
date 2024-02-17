@@ -87,7 +87,7 @@ const RegisterSideBar = ({ currentStepIndex, goTo }: RegisterSideBarProps) => {
                                 show={currentStepIndex === 3}
                                 color="#6fe79f"
                             >
-                                Summary
+                                Term of usage
                             </RoughNotation>
                         </button>
                     </li>
