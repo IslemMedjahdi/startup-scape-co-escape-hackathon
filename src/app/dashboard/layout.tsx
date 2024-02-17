@@ -47,7 +47,7 @@ const AdminLayout = async ({ children }: { children: React.ReactNode }) => {
                     </div>
                 </div>
             ) : (
-                <div className="min-h-screen h-screen p-4">{children}</div>
+                <div className="min-h-screen h-screen p-4 overflow-auto">{children}</div>
             )}
         </SideBar>
     );

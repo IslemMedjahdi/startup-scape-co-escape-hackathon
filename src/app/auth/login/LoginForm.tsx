@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 
-import LOGO from '@/../public/images/logo.png';
+import LOGO from '@/../public/images/logo.svg';
 
 import {
     Form,
@@ -24,6 +24,7 @@ import { signIn } from 'next-auth/react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { LoadingSpinner } from '@/components/LoadingSpinner';
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
 
 const formSchema = z.object({
     email: z.string().email(),
@@ -121,6 +122,9 @@ const LoginForm = () => {
                         {loading && <LoadingSpinner />}
                         <span>Submit</span>
                     </Button>
+                    <div className="flex justify-end">
+                        <Link href="/auth/register">Create an account</Link>
+                    </div>
                 </form>
             </Form>
         </div>

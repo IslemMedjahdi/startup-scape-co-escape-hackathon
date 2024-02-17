@@ -10,15 +10,14 @@ import { TooltipProvider } from '@/components/ui/tooltip';
 import { ResizableHandle, ResizablePanel, ResizablePanelGroup } from '@/components/ui/resizable';
 import Nav from './Nav';
 
-import LOGO from '@/../public/images/logo.png';
-import LOGO_WITH_FONT from '@/../public/images/logo-with-font.png';
+import LOGO from '@/../public/images/logo.svg';
+import LOGO_WITH_FONT from '@/../public/images/logo-text-side.svg';
 
 import { Separator } from '@/components/ui/separator';
 import Link from 'next/link';
 import { Button, buttonVariants } from '@/components/ui/button';
 
 import { signOut } from 'next-auth/react';
-import { useRouter } from 'next/navigation';
 
 interface SideBarProps {
     defaultCollapsed?: boolean;
@@ -74,7 +73,7 @@ const SideBar = ({
                         isCollapsed && 'min-w-[50px] transition-all duration-300 ease-in-out',
                     )}
                 >
-                    <Link href={'/dashboard'}>
+                    <Link href={'/dashboard'} className="p-2 flex justify-center">
                         <Image
                             src={LOGO}
                             alt="logo"
