@@ -1,17 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 import FormWrapper from './FormWrapper';
 import { RegisterRequest } from '@/app/api/auth/register/request';
-const Checkbox = ({ label, isChecked, onChange }) => (
-    <label className="flex items-center gap-2 cursor-pointer">
-        <input
-            type="checkbox"
-            checked={isChecked}
-            onChange={onChange}
-            className="form-checkbox h-5 w-5 text-white border-white"
-        />
-        <span className="text-white">{label}</span>
-    </label>
-);
 
 type TermOfUsageFormProps = {
     form: RegisterRequest;
@@ -20,12 +9,6 @@ type TermOfUsageFormProps = {
 };
 
 const TermOfUsageForm = ({ form, errors, updateForm }: TermOfUsageFormProps) => {
-    const [acceptedTerms, setAcceptedTerms] = useState(false);
-
-    const handleAcceptanceChange = event => {
-        setAcceptedTerms(event.target.checked);
-    };
-
     return (
         <FormWrapper title="Term of usage" description="">
             <div className="w-full flex flex-col gap-5 text-white">
@@ -56,11 +39,6 @@ const TermOfUsageForm = ({ form, errors, updateForm }: TermOfUsageFormProps) => 
                         governed by [Jurisdiction]&apos;s laws.
                     </li>
                 </ul>
-                <Checkbox
-                    label="I have read and agree to the terms of usage"
-                    isChecked={acceptedTerms}
-                    onChange={handleAcceptanceChange}
-                />
             </div>
         </FormWrapper>
     );
