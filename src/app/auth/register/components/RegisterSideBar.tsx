@@ -10,7 +10,7 @@ const RegisterSideBar = ({ currentStepIndex, goTo }: RegisterSideBarProps) => {
     return (
         <div className="absolute -top-20 left-0 w-full md:w-[25%] md:relative md:top-0 md:left-0">
             <nav className="py-5 text-slate-200 bg-slate-800 h-full rounded-md border border-slate-700 md:p-5">
-                <ul className="flex justify-center gap-2 md:flex-col">
+                <ul className="flex justify-center gap-6 md:flex-col">
                     <li className="flex flex-col items-start font-medium">
                         <span className="hidden text-slate-500 uppercase text-sm md:flex">
                             step 1

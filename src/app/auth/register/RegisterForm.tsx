@@ -128,7 +128,7 @@ const RegisterForm = () => {
                         )}
                     </AnimatePresence>
                     <div className="w-full items-center flex justify-between">
-                        <div className="">
+                        <div className="text-white">
                             {!isFirstStep && (
                                 <Button onClick={previousStep} type="button" variant="ghost">
                                     Go Back

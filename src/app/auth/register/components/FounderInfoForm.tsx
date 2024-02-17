@@ -15,7 +15,9 @@ const FounderInfoForm = ({ form, errors, updateForm }: FounderInfoFormProps) => 
         <FormWrapper title="Founder info" description="">
             <div className="w-full flex flex-col gap-5">
                 <div className="flex flex-col gap-2">
-                    <Label htmlFor="firstName">First Name</Label>
+                    <Label className="text-white" htmlFor="firstName">
+                        First Name
+                    </Label>
                     <Input
                         autoFocus
                         type="text"
@@ -32,7 +34,9 @@ const FounderInfoForm = ({ form, errors, updateForm }: FounderInfoFormProps) => 
                     )}
                 </div>
                 <div className="flex flex-col gap-2">
-                    <Label htmlFor="lastName">Last Name</Label>
+                    <Label className="text-white" htmlFor="lastName">
+                        Last Name
+                    </Label>
                     <Input
                         autoFocus
                         type="text"
@@ -49,7 +53,9 @@ const FounderInfoForm = ({ form, errors, updateForm }: FounderInfoFormProps) => 
                     )}
                 </div>
                 <div className="flex flex-col gap-2">
-                    <Label htmlFor="email">Email Address</Label>
+                    <Label className="text-white" htmlFor="email">
+                        Email Address
+                    </Label>
                     <Input
                         type="text"
                         name="email"
@@ -63,7 +69,9 @@ const FounderInfoForm = ({ form, errors, updateForm }: FounderInfoFormProps) => 
                     {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
                 </div>
                 <div className="flex flex-col gap-2">
-                    <Label htmlFor="password">Password</Label>
+                    <Label className="text-white" htmlFor="password">
+                        Password
+                    </Label>
                     <Input
                         type="password"
                         name="password"
@@ -76,7 +84,9 @@ const FounderInfoForm = ({ form, errors, updateForm }: FounderInfoFormProps) => 
                     {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
                 </div>
                 <div className="flex flex-col gap-2">
-                    <Label htmlFor="phone">Phone Number</Label>
+                    <Label className="text-white" htmlFor="phone">
+                        Phone Number
+                    </Label>
                     <Input
                         type="tel"
                         name="phone"

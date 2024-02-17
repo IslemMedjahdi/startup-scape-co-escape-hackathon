@@ -16,7 +16,9 @@ const CompanyInfoForm = ({ form, errors, updateForm }: CompanyInfoFormProps) => 
         <FormWrapper title="Company info" description="">
             <div className="w-full flex flex-col gap-5">
                 <div className="flex flex-col gap-2">
-                    <Label htmlFor="firstName">Company Name</Label>
+                    <Label className="text-white" htmlFor="firstName">
+                        Company Name
+                    </Label>
                     <Input
                         autoFocus
                         type="text"
@@ -33,7 +35,9 @@ const CompanyInfoForm = ({ form, errors, updateForm }: CompanyInfoFormProps) => 
                     )}
                 </div>
                 <div className="flex flex-col gap-2">
-                    <Label htmlFor="Company Description">Company Description</Label>
+                    <Label className="text-white" htmlFor="Company Description">
+                        Company Description
+                    </Label>
                     <Textarea
                         name="Company Description"
                         id="companyWebsite"
@@ -47,7 +51,9 @@ const CompanyInfoForm = ({ form, errors, updateForm }: CompanyInfoFormProps) => 
                     )}
                 </div>
                 <div className="flex flex-col gap-2">
-                    <Label htmlFor="Company Email">Company Email</Label>
+                    <Label className="text-white" htmlFor="Company Email">
+                        Company Email
+                    </Label>
                     <Input
                         type="text"
                         name="Company Email"
@@ -63,7 +69,9 @@ const CompanyInfoForm = ({ form, errors, updateForm }: CompanyInfoFormProps) => 
                     )}
                 </div>
                 <div className="flex flex-col gap-2">
-                    <Label htmlFor="companyphone">Company Phone</Label>
+                    <Label className="text-white" htmlFor="companyphone">
+                        Company Phone
+                    </Label>
                     <Input
                         type="tel"
                         name="companyphone"
@@ -79,7 +87,9 @@ const CompanyInfoForm = ({ form, errors, updateForm }: CompanyInfoFormProps) => 
                     )}
                 </div>
                 <div className="flex flex-col gap-2">
-                    <Label htmlFor="company website">Company Website</Label>
+                    <Label className="text-white" htmlFor="company website">
+                        Company Website
+                    </Label>
                     <Input
                         type="url"
                         name="company website"
@@ -95,7 +105,9 @@ const CompanyInfoForm = ({ form, errors, updateForm }: CompanyInfoFormProps) => 
                     )}
                 </div>
                 <div className="flex flex-col gap-2">
-                    <Label htmlFor="target market">Target Market</Label>
+                    <Label className="text-white" htmlFor="target market">
+                        Target Market
+                    </Label>
                     <Input
                         name="target market"
                         id="target market"
@@ -110,7 +122,9 @@ const CompanyInfoForm = ({ form, errors, updateForm }: CompanyInfoFormProps) => 
                     )}
                 </div>
                 <div className="flex flex-col gap-2">
-                    <Label htmlFor="year founded">Year Founded</Label>
+                    <Label className="text-white" htmlFor="year founded">
+                        Year Founded
+                    </Label>
                     <Input
                         type="number"
                         name="year founded"

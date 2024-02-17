@@ -16,7 +16,9 @@ const SocialMediaForm = ({ form, errors, updateForm }: SocialMediaFormProps) => 
         <FormWrapper title="Social Media" description="">
             <div className="w-full flex flex-col gap-5">
                 <div className="flex flex-col gap-2">
-                    <Label htmlFor="facebook">Facebook</Label>
+                    <Label className="text-white" htmlFor="facebook">
+                        Facebook
+                    </Label>
                     <Input
                         autoFocus
                         type="text"
@@ -35,7 +37,9 @@ const SocialMediaForm = ({ form, errors, updateForm }: SocialMediaFormProps) => 
                     {errors.facebook && <p className="text-red-500 text-sm">{errors.facebook}</p>}
                 </div>
                 <div className="flex flex-col gap-2">
-                    <Label htmlFor="linkedin">Linkedin</Label>
+                    <Label className="text-white" htmlFor="linkedin">
+                        Linkedin
+                    </Label>
                     <Input
                         autoFocus
                         type="text"
@@ -54,7 +58,9 @@ const SocialMediaForm = ({ form, errors, updateForm }: SocialMediaFormProps) => 
                     {errors.linkedin && <p className="text-red-500 text-sm">{errors.linkedin}</p>}
                 </div>
                 <div className="flex flex-col gap-2">
-                    <Label htmlFor="twitter">Twitter</Label>
+                    <Label className="text-white" htmlFor="twitter">
+                        Twitter
+                    </Label>
                     <Input
                         type="text"
                         name="twitter"
@@ -72,7 +78,9 @@ const SocialMediaForm = ({ form, errors, updateForm }: SocialMediaFormProps) => 
                     {errors.twitter && <p className="text-red-500 text-sm">{errors.twitter}</p>}
                 </div>
                 <div className="flex flex-col gap-2">
-                    <Label htmlFor="instagram">instagram</Label>
+                    <Label className="text-white" htmlFor="instagram">
+                        instagram
+                    </Label>
                     <Input
                         type="text"
                         name="instagram"
