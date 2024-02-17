@@ -138,11 +138,11 @@ const ConcurrentCompanuById = () => {
                         <div className="flex flex-col dark:bg-slate-800 rounded p-4 bg-gray-50">
                             <p className="font-medium text-sm"> Target Market:</p>
                             <p>
-                                Jumia's target market is the African population. They aim to make
-                                online shopping accessible to everyone in Africa by offering a
+                                Jumia&lsquo;s target market is the African population. They aim to
+                                make online shopping accessible to everyone in Africa by offering a
                                 variety of products at affordable prices and providing reliable
                                 delivery services. They also target sellers who want to reach a
-                                wider audience and expand their business. Jumia's platform is
+                                wider audience and expand their business. Jumia&apos;s platform is
                                 designed to cater to the needs of both buyers and sellers in Africa.
                             </p>
                         </div>
