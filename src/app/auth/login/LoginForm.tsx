@@ -28,7 +28,7 @@ import Link from 'next/link';
 
 const formSchema = z.object({
     email: z.string().email(),
-    password: z.string().min(8).max(100),
+    password: z.string().max(100),
 });
 
 const LoginForm = () => {
