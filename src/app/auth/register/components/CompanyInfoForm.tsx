@@ -97,7 +97,6 @@ const CompanyInfoForm = ({ form, errors, updateForm }: CompanyInfoFormProps) => 
                 <div className="flex flex-col gap-2">
                     <Label htmlFor="target market">Target Market</Label>
                     <Input
-                        type="url"
                         name="target market"
                         id="target market"
                         placeholder="e.g. e-commerce, retail, etc."
